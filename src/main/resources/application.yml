@@ -1,0 +1,24 @@
+server:
+    port: 9007
+    context-path: /
+    session:
+      cookie:
+        name: UISESSION
+security:
+  basic:
+    enabled: false
+  oauth2:
+    client:
+      clientId: client_2
+      clientSecret: 123456
+      accessTokenUri: http://localhost:9001/oauth/token
+      userAuthorizationUri: http://localhost:9001/oauth/authorize
+      scope: select
+    resource:
+      userInfoUri: http://localhost:9001/user
+      filter-order: 1
+spring:
+  thymeleaf:
+    cache: false
+    
+ 
